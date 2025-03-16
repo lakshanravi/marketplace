@@ -1,6 +1,7 @@
 import { Box, Button, Container, Heading, Input, useColorModeValue, useToast, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 import { useProductStore } from "../store/product";
+//uding import krgnn hook ekk widiht
 
 const CreatePage = () => {
 	const [newProduct, setNewProduct] = useState({
@@ -8,6 +9,7 @@ const CreatePage = () => {
 		price: "",
 		image: "",
 	});
+	//chakra ui eken gtte meka
 	const toast = useToast();
 
 	const { createProduct } = useProductStore();
@@ -29,6 +31,7 @@ const CreatePage = () => {
 				isClosable: true,
 			});
 		}
+		//udin product ek create klata psse me yt ekin aaye reset krnw state ek empty widiht
 		setNewProduct({ name: "", price: "", image: "" });
 	};
 

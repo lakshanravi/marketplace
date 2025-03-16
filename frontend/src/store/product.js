@@ -7,6 +7,8 @@ export const useProductStore = create((set) => ({
 		if (!newProduct.name || !newProduct.image || !newProduct.price) {
 			return { success: false, message: "Please fill in all fields." };
 		}
+
+		//api ekee mul kotasa vite.config.js eke dila tynne
 		const res = await fetch("/api/products", {
 			method: "POST",
 			headers: {
@@ -16,6 +18,7 @@ export const useProductStore = create((set) => ({
 		});
 		const data = await res.json();
 		set((state) => ({ products: [...state.products, data.data] }));
+		//data.data kynne api backend eken product ek create klata psse return krnne data kyl ekai
 		return { success: true, message: "Product created successfully" };
 	},
 	fetchProducts: async () => {

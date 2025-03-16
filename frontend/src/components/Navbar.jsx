@@ -5,10 +5,13 @@ import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
 
+
 function Navbar() {
 
   // To create a dark mode and light mode toggle in React, you can use Chakra UI's useColorMode hook
   const { colorMode, toggleColorMode } = useColorMode();
+  //useProductStore is a cstom hook that we created in the store folder using zustand.
+ 
   return (
     // px =padding
     // maxW= maximum width
